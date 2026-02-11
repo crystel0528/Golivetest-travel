@@ -1,0 +1,30 @@
+config:
+  target: "https://dev.travelinsider.co"   # <-- must exist
+  maxVusers: 150   # Limit simultaneous users to 150
+  phases:
+    - duration: 300   # 5 minutes normal
+      arrivalRate: 5
+    - duration: 300   # 5 minutes busy
+      arrivalRate: 10
+    - duration: 600   # 10 minutes peak
+      arrivalRate: 20
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "Booking Flow"
+    flow:
+      - get:
+          url: "/"   # Browse activities
+      - post:
+          url: "/search"
+          json:
+            date: "2026-02-10"
+            guests: 2
+      - post:
+          url: "/checkout"
+          json: {}
+      - post:
+          url: "/payment/initiate"
+          json: {}
