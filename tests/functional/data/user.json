@@ -1,0 +1,5 @@
+[
+  { "email": "user1@example.com", "phone": "+639123456789" },
+  { "email": "user2@example.com", "phone": "+639987654321" },
+  { "email": "user3@example.com", "phone": "+639987654322" }
+]

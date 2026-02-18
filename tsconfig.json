@@ -7,9 +7,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "types": ["node", "@playwright/test"],
+    "types": ["k6", "node", "@playwright/test"],
     "lib": ["ESNext", "DOM"],
-    "outDir": "dist"
+    "baseUrl": ".",                        // root of project
+    "paths": {
+      "@helpers/*": ["tests/functional/utils/helpers/*"],  // correct path
+      "@data/*": ["tests/functional/data/*"]       // if you have a data folder under functional
+    }
   },
-  "include": ["**/*.ts"]
+  "include": [
+    "tests/**/*.ts"
+, "tests/performance/k6/scenarios/bookingload.js"  ]
 }

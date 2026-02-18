@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "show-report": "npx playwright show-report"
+    "show-report": "npx playwright show-report",
+    "build:k6": "esbuild tests/performance/k6/scenarios/bookingload.spec.ts --bundle --outfile=dist/k6/bookingload.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +16,17 @@
   "devDependencies": {
     "@playwright/test": "^1.58.1",
     "@types/axe-core": "^2.0.2",
+    "@types/k6": "^1.6.0",
+    "@types/node-fetch": "^2.6.13",
+    "esbuild": "^0.27.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "axe-core": "^4.11.1",
+    "chalk": "^5.6.2",
     "dotenv": "^17.2.3",
-    "lighthouse": "^12.8.2"
+    "lighthouse": "^12.8.2",
+    "open": "^11.0.0"
   }
 }
