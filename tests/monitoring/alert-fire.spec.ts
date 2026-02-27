@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
-import { login } from '../functional/utils/helpers/auth.helper';
+import { authenticate } from '../functional/utils/helpers/auth.helper';
 
 test.describe('Monitoring - Alert Fire', () => {
 
   test('should login, trigger alert, and verify it appears', async ({ page, request }) => {
 
     // 1️⃣ Login using helper
-    await login(
+    await authenticate(
       page,
       process.env.TEST_EMAIL || 'crysteline@onedigital.dev',
       process.env.TEST_PASSWORD || 'P@ssword!123'

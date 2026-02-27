@@ -1,0 +1,47 @@
+{
+  "cookies": [
+    {
+      "name": "__stripe_mid",
+      "value": "8e30da99-209a-43fa-8e58-3703c3a7a3109a925b",
+      "domain": ".dev.travelinsider.co",
+      "path": "/",
+      "expires": 1803704556,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__stripe_sid",
+      "value": "eb38ea71-39c6-4b63-850a-36bfc30e1202dc736d",
+      "domain": ".dev.travelinsider.co",
+      "path": "/",
+      "expires": 1772170356,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://dev.travelinsider.co",
+      "localStorage": [
+        {
+          "name": "loggedInAccounts",
+          "value": "[]"
+        },
+        {
+          "name": "bookingData",
+          "value": "{}"
+        },
+        {
+          "name": "selectedCurrency",
+          "value": "{\"code\":\"SGD\",\"symbol\":\"S$\"}"
+        },
+        {
+          "name": "authConfig",
+          "value": "{\"signIn\":{\"enabled\":1,\"mobile\":{\"enabled\":1,\"methods\":{\"otp\":{\"enabled\":1},\"password\":{\"enabled\":1}}},\"email\":{\"enabled\":1,\"methods\":{\"otp\":{\"enabled\":1},\"password\":{\"enabled\":1}}}},\"signUp\":{\"enabled\":1,\"mobile\":{\"enabled\":1,\"methods\":{\"otp\":{\"enabled\":1}}},\"email\":{\"enabled\":1,\"methods\":{\"otp\":{\"enabled\":0}}}},\"socialButtons\":{\"enabled\":1,\"google\":{\"enabled\":1},\"facebook\":{\"enabled\":1}}}"
+        }
+      ]
+    }
+  ]
+}

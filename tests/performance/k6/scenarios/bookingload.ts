@@ -28,8 +28,9 @@ interface SearchResponse {
 // ================================
 // ✅ Load destinations JSON
 // ================================
+// bundling-ready path
 const destinations = new SharedArray<Destination>('destinations', () =>
-  JSON.parse(open('../data/destinations.json')) as Destination[]
+  JSON.parse(open('./data/destinations.json')) as Destination[]
 );
 
 // ================================
@@ -114,7 +115,7 @@ export default function () {
 
   // 3️⃣ RATE DETAILS
   const rateRes = http.get(
-    `https://dev-api.travelinsider.co/api/xeni/activity-details/${activityId}P1?include=all&currency=USD&lang=en-US`,
+    `https://dev-api.travelinsider.co/api/xeni/activity-details/${activityId}?include=all&currency=USD&lang=en-US`,
     { headers }
   );
   check(rateRes, { 'rate success': (r) => r.status === 200 });

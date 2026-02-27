@@ -37,7 +37,7 @@ export default defineConfig({
   use: {
     headless: false,               // show browser
     baseURL: BASE_URL,
-    viewport: { width: 1220, height: 1080 },
+    viewport: { width: 1280, height: 800 },
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',

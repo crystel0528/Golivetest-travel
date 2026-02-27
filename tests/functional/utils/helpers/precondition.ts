@@ -8,7 +8,7 @@ export async function precondition(page: Page): Promise<void> {
   await page.goto('https://dev.travelinsider.co', { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(2000);
   console.log('✅ Homepage loaded.');
-
+/*
   // Step 2: Handle cookie consent if visible
   try {
     const cookieButton: Locator = page.locator(
@@ -24,7 +24,7 @@ export async function precondition(page: Page): Promise<void> {
   } catch {
     console.log('⚠️ Cookie banner not found or already dismissed.');
   }
-
+*/
   // Step 3: Try to open sign-in modal
   const signInTriggers: Locator[] = [
     page.locator('[data-testid="sign-in-button"]'),

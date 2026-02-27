@@ -1,5 +1,8 @@
 import { Page, expect } from '@playwright/test';
 
+
+console.log('🔥 REAL univhelpers.ts LOADED');
+
 // ---------------- HELPER FUNCTIONS ----------------
 
 // 🖱️ Optional mouse overlay for visual debugging
